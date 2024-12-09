@@ -1,0 +1,425 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Baggrundsindstillinger for hele siden */
+body {
+    background-color: #2b3d4f; /* Baggrundsfarve */
+    margin: 0px; /* Mellemrum omkring siden */
+    padding-right: 0px; /* Lidt plads på højre side */
+}
+
+
+
+
+/*======================================================================
+                             Overskrifter
+========================================================================*/
+
+
+.center {
+    text-align: center; /* Centrer teksten */
+    color: #a39182;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    margin-top: 0px;
+    margin-bottom: 0;
+    font-size: 50px;
+    position: relative; /* Nødvendigt for at bruge ::after */
+}
+
+.center::after {
+    content: ""; /* Pseudo-element til borderen */
+    display: block; /* Gør elementet til en blok */
+    width: calc(100% - 40px); /* Gør borderen 20px mindre på hver side */
+    height: 2px; /* Højden af borderen */
+    background-color: #a39182; /* Border-farve */
+    margin: 0 auto; /* Centrer borderen */
+    position: absolute;
+    bottom: -10px; /* Placerer den lige under teksten */
+    left: 20px; /* For at sikre, det justerer sig rigtigt */
+}
+
+.center-1 {
+    text-align: center; /* Centrer teksten */
+    color: #a39182;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    margin: 0px;
+    
+    font-size: 50px;
+    position: relative; /* Nødvendigt for at bruge ::after */
+}
+
+.center-1::after {
+    content: ""; /* Pseudo-element til borderen */
+    display: block; /* Gør elementet til en blok */
+    width: calc(100% - 40px); /* Gør borderen 20px mindre på hver side */
+    height: 2px; /* Højden af borderen */
+    background-color: #a39182; /* Border-farve */
+    margin: 0 auto; /* Centrer borderen */
+    position: absolute;
+    bottom: -10px; /* Placerer den lige under teksten */
+    left: 20px; /* For at sikre, det justerer sig rigtigt */
+}
+
+
+
+
+
+/*======================================================================
+                               Billede i toppen
+========================================================================*/
+
+
+.top-image img {
+    background-color: rgba(0, 0, 0, 0.452);
+    width: 100%; /* Fyld bredden af containeren */
+    height: 300px; /* Bevar proportionerne */
+    display: block; /* Fjern små mellemrum, hvis billedet er en inline-block */
+    object-fit: cover; /* Sørg for, at billedet tilpasses smukt */
+    margin-bottom: 0px;
+    opacity: 1;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sort med gennemsigtighed */
+}
+
+.overlay-container {
+    position: relative; /* Sørg for, at overlay placeres relativt til denne container */
+    width: 100%;
+    height: 00px; /* Indstil højden */
+    overflow: hidden; /* Skjuler indhold uden for containerens grænser */
+}
+
+.overlay-container img {
+    width: 100%; /* Fyld hele bredden */
+    height: 100%; /* Tilpas højden */
+    object-fit: cover; /* Bevar billedets proportioner */
+}
+
+
+
+
+
+
+
+
+
+/*======================================================================
+                                Første afsnit
+========================================================================*/
+
+
+
+
+.header-1{
+    font-size: 40px; /* Skriftstørrelse for teksten i headeren. */
+    background-color: #d1d5d9a6; /* Grå baggrundsfarve til headeren. */
+    width: 800px; /* Headeren fylder 60% af sin overordnede containers bredde. */
+    border: 2px solid  #373631; ; /* Tilføjer en halvtransparent sort kant rundt om headeren. */
+    color: #0a1219; /* Sort tekstfarve. */
+    padding-left: 5px; /* Tilføjer 5 pixels plads mellem teksten og venstre kant. */
+    margin:0px; /*fjerner alt margin*/
+    text-align: justify; /* Justerer teksten, så begge sider er lige. */
+    transition: 0.25s ease-in;
+    margin-left: 600px;
+    margin-top: 75px; 
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+ .skrift-1{
+    color: #d1d5d9; /* Gør teksten hvid. */
+    padding: 5px;
+    background-color: #516070; /* Giver teksten en halv-gennemsigtig grå baggrund. */
+    width: 800px;
+    border-bottom: 2px solid #373631;
+    border-right: 2px solid #373631;
+    border-left: 2px solid #373631;
+    margin-left: 600px; 
+    margin-top: -230px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.img-1{
+    max-width: 750px; /* Sikrer, at billedet ikke bliver bredere end 750 pixels. */
+    height: 300px; /* Gør billedet 300 pixels højt. */
+    width: auto; /* Indstiller billedets bredde til 400 pixels. */
+    margin: 0;/* Centrerer billedet horisontalt. */
+    border-radius: 30px; /* Gør hjørnerne på billedet runde. */
+    transition: width 0.5s ease; /* Giver en blød overgang, når bredden ændres. */
+    transition: height 0.5s ease; /* Giver en blød overgang, når højden ændres. */
+    margin-top: -70px;
+    margin-left: 150px;
+    border-radius: 10px;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+/*======================================================================
+                                Anden afsnit
+========================================================================*/
+
+
+
+
+.header-2 {
+    font-size: 40px; /* Skriftstørrelse for teksten i headeren. */
+    background-color: #d1d5d9a6; /* Gennemsigtig hvid baggrundsfarve. */
+    max-width: 800px;
+    width: 100%;
+    color: #0a1219; /* Sort tekstfarve. */
+    padding: 5px; /* Ingen indvendig afstand. */
+    text-align: justify; /* Justerer teksten, så begge sider er lige. */
+    transition: 0.25s ease-out; /* Giver en glidende overgang, når bredden ændres. */
+    border: 2px solid #373631;
+    margin-top: 150px;
+    margin-left: 75px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+} 
+.skrift-2 {
+    color: #d1d5d9; /* Gør teksten hvid. */
+    padding: 5px;
+    background-color: #516070; /* Giver teksten en halv-gennemsigtig grå baggrund. */
+    width: 800px;
+    margin: 0px;
+    border-bottom: 2px solid #373631;
+    border-right: 2px solid #373631;
+    border-left: 2px solid #373631;
+    display: block;
+    margin-left: 75px;
+    margin-top: -210px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.img-2{
+    width: 450px;
+    height: 300px;
+    margin: 0px;
+    margin-left: 950px;
+    margin-top: -100px;
+    border-radius: 10px; /* Gør hjørnerne på billedet runde. */
+    box-shadow: 10px -10px 20px rgba(0, 0, 0, 0.6);
+    
+
+ 
+}
+
+
+/*======================================================================
+                                Tredje afsnit
+========================================================================*/
+
+
+.header-3 {
+    font-size: 40px; /* Skriftstørrelse for teksten i headeren. */
+    background-color: #d1d5d9a6; /* Gennemsigtig hvid baggrundsfarve. */
+    max-width: 800px;
+    width: 100%;
+    color: #0a1219; /* Sort tekstfarve. */
+    padding: 5px; /* Ingen indvendig afstand. */
+    margin: 0px; /* Fjerner alt margin */
+    text-align: justify; /* Justerer teksten, så begge sider er lige. */
+    transition: 0.25s ease-out; /* Giver en glidende overgang, når bredden ændres. */
+    border: 2px solid #373631;
+    margin-top: 150px;
+    margin-left: 600px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    
+}
+
+
+.skrift-3 {
+    color: #d1d5d9; /* Gør teksten hvid. */
+    padding: 5px;
+    background-color: #516070; /* Giver teksten en halv-gennemsigtig grå baggrund. */
+    max-width: 800px;
+    width: 100%;
+    margin: 0px;
+    border-bottom: 2px solid #373631;
+    border-right: 2px solid #373631;
+    border-left: 2px solid #373631;
+    display: block;
+    margin-left: 600px;
+    margin-bottom: 40px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.img-3{
+    height:400px;
+    width:auto; 
+    display: block;
+    margin-left:200px;
+    margin-bottom:00px;
+    border-radius:30px;
+    margin-top: -400px;
+    margin-bottom: 75px;
+    border: 2px solid #d1d5d9a6 ;
+    border-radius: 10px;
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.6);
+    
+}
+
+
+/*======================================================================
+                        Knap i vestre side
+========================================================================*/
+
+
+.back-button {
+    position: absolute; /* Fast position i vinduet */
+    top: 10px; /* 10px fra toppen */
+    left: 20px; /* 10px fra venstre */
+    
+}
+
+.back-button button {
+    background-color: #a39182; /* Baggrundsfarve */
+    color: #2b3d4f; /* Tekstfarve */
+    border: none; /* Fjern kant */
+    padding: 10px 20px; /* Indvendig afstand */
+    font-size: 16px; /* Tekststørrelse */
+    border-radius: 5px; /* Runde hjørner */
+    cursor: pointer; /* Gør det tydeligt, at det er en knap */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Let skygge */
+    transition: background-color 0.3s ease-out; /* Glat overgang for hover-effekt */
+    transition: transform 0.3s ease;
+}
+
+.back-button button:hover {
+    background-color: #2b3d4f; /* Lys baggrund ved hover */
+    color: #a39182; /* Mørk tekst ved hover */
+}
+
+
+
+
+/*======================================================================
+                                Billeder i Bunden
+========================================================================*/
+
+
+.image-grid {
+    display: grid; /* Bruger et grid-layout til at placere elementer. */
+    grid-template-columns: repeat(3, 1fr); /* Opretter 3 lige store kolonner. */
+    gap: 0px; /* Giver 100 pixels mellemrum mellem elementer i gridet. */
+    margin-top: 50px; /* Afsand fra teksten */
+    margin-bottom: 30px; /* Tilføjer plads under gridet. */
+    margin-left: 30px; /* Tilføjer plads til venstre for gridet. */
+}
+
+/* Stil til hver billedcontainer */
+.image-container {
+    overflow: hidden; /* Skjuler alt indhold uden for containerens grænser. */
+    position: relative; /* Gør det muligt at placere indre elementer relativt. */
+    width: 100%; /* Gør containeren 100% af dens overordnede element. */
+    max-width: 350px; /* Begrænser bredden til maksimalt 350 pixels. */
+    margin: 0px; /* Fjerner alt margin */
+    display: inline-block; /* Gør containeren til en inline-blok. */
+    
+}
+
+/* Stil til billederne inde i containeren */
+.image-container img {
+    width: 100%; /* Gør billedet så bredt som containeren. */
+    height: auto; /* Justerer højden automatisk baseret på bredden. */
+    border-radius: 10px; /* Gør hjørnerne på billedet let runde. */
+    transition: transform 0.3s ease; /* Giver en blød overgang, når billedet transformeres. */
+}
+
+/* Stil til teksten, der vises, når musen er over billedet */
+.image-container .hover-text {
+    position: absolute; /* Placerer teksten i forhold til containeren. */
+    top: 40%; /* Positionerer teksten midt på billedet. */
+    left: 50%; /* Positionerer teksten midt på billedet. */
+    transform: translate(-50%, -50%); /* Justerer for den nøjagtige centrering. */
+    color: white; /* Gør teksten hvid. */
+    font-size: 16px; /* Gør teksten 16 pixels stor. */
+    background-color: rgba(0, 0, 0, 0.7); /* Giver teksten en halvgennemsigtig sort baggrund. */
+    padding: 200px 270px; /* Giver ekstra plads omkring teksten. */
+    border-radius: 30px; /* Gør hjørnerne på baggrunden runde. */
+    opacity: 0; /* Gør teksten usynlig som standard. */
+    transition: opacity 0.3s ease; /* Giver en blød overgang, når gennemsigtigheden ændres. */
+    text-align: center; /* Centrerer teksten. */
+}
+
+/* Effekt, når musen svæver over et billede */
+.image-container:hover img {
+    transform: scale(1.1); /* Forstørrer billedet lidt, når musen er over det. */
+    border-radius: 30px; /* Gør hjørnerne mere runde. */
+}
+
+/* Gør teksten synlig ved hover */
+.image-container:hover .hover-text {
+    opacity: 1; /* Gør teksten synlig, når musen er over containeren. */
+    border-radius: 30px; /* Gør hjørnerne på teksten runde. */
+}
+.image-container .text-box {
+    background-color: #516070; /* Halvgennemsigtig sort baggrund */
+    color: #d1d5d9; /* Hvid tekst */
+    font-size: 16px; /* Skriftstørrelse */
+    padding: 10px; /* Indvendig afstand */
+    border-radius: 0px; /* Runde hjørner */
+    text-align: justify; /* Centrerer teksten */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Blød skygge */
+    margin-top: 10px; /* Afstand over boksen */
+    margin-bottom: 0px;
+    gap:0px;
+    opacity: 0; /* Gør teksten usynlig som standard */
+    transform: translateY(-75px); /* Flytter teksten lidt opad */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Effekt ved hover */
+}
+.image-container:hover .text-box {
+    opacity: 1; /* Gør teksten synlig */
+    transform: translateY(0); /* Returnerer teksten til sin oprindelige position */
+    height: auto; /* Lader tekstboksen udfolde sig */
+}
+
+
+/*======================================================================
+                            Responsiv
+========================================================================*/
+
+
+@media screen and (max-width: 768px) {
+    .header-1 {
+       
+        font-size: 30px;
+        margin: 50px -50% 0% 50px;
+        width: 80%;
+    }
+    .skrift-1 {
+        font-size: 15px;
+        margin-left: 50px;
+        margin-top: -775.5px;
+        margin-bottom:0px;
+        width: 80%;
+        
+        
+    }
+
+    .img-1 {
+        max-width: 100%; /* Holder billedet responsivt inden for containeren */
+        height: 300px;
+        width:auto;
+        display: block; /* Sørger for, at billedet fungerer som et blok-element */
+        margin-top: 475px;
+        margin-left: 85px;
+        margin-right: 0px;
+    }
+
+
+}
